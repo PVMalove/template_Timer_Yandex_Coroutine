@@ -10,7 +10,7 @@ namespace ExampleYGDateTime
         private const string SERVER_URI = "https://worldtimeapi.org/api/timezone/Europe/Moscow";
         private UnityWebRequest webRequest;
 
-        public override IEnumerator CheckConnection()
+        public override IEnumerator ConnectServer()
         {
             webRequest = UnityWebRequest.Get(SERVER_URI);
             yield return webRequest.SendWebRequest();
@@ -42,5 +42,10 @@ namespace ExampleYGDateTime
             }
             return serverTime;
         }
+    }
+    
+    public struct ServerTimeResponse
+    {
+        public int unixtime;
     }
 }

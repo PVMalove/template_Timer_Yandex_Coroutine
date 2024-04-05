@@ -71,7 +71,7 @@ namespace ExampleYGDateTime
         public bool CheckTimerRewardEnded() => 
             Time.realtimeSinceStartupAsDouble + deltaTime > timerTime;
 
-        public abstract IEnumerator CheckConnection();
+        public abstract IEnumerator ConnectServer();
         protected abstract int GetServerTimeNow();
 
         public void SetTimerRewardData()

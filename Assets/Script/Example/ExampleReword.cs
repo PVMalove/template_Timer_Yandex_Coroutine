@@ -75,7 +75,7 @@ namespace ExampleYGDateTime
 
         private IEnumerator LoadDateTimeReward()
         {
-            yield return rewardService.CheckConnection();
+            yield return rewardService.ConnectServer();
             if (rewardService.CurrentRequestResult)
             {
                 warningPopup.SetActive(false);
@@ -122,7 +122,7 @@ namespace ExampleYGDateTime
 
         private IEnumerator StartRewardedViewingAds(int id)
         {
-            yield return rewardService.CheckConnection();
+            yield return rewardService.ConnectServer();
             switch (id)
             {
                 case 1:

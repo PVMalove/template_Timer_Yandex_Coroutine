@@ -10,7 +10,7 @@ namespace ExampleYGDateTime
     {
         private UnityWebRequest webRequest;
 
-        public override IEnumerator CheckConnection()
+        public override IEnumerator ConnectServer()
         {
             webRequest = UnityWebRequest.Head(Application.absoluteURL);
             webRequest.SetRequestHeader("cache-control", "no-cache");

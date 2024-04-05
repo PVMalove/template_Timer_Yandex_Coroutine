@@ -30,7 +30,7 @@ namespace ExampleYGDateTime
 
         private IEnumerator LoadDateTime()
         {
-            yield return rewardService.CheckConnection();
+            yield return rewardService.ConnectServer();
             if (rewardService.CurrentRequestResult)
             {
                 rewardService.GetDateTimeServer();
